@@ -1,3 +1,7 @@
+import "./egyedi.css"
+import ListCard from "./Components/ListCard"
+import AnimalCard from "./Components/AnimalCard"
+
 function App() {
     return <div className='container' >
         { /* FŐCÍM */ }
@@ -47,54 +51,11 @@ function App() {
     { /* LISTÁK */ }
 
     <div className="row mb-2" >
-        <div className="col-sm-4 kartya" >
-            <h2>Élőhelyek </h2>
 
-            < ul className = "list-group" >
-                <li className="list-group-item" > Afrikai szavanna </li>
-
-                    < li className = "list-group-item" > Ázsiai esőerdő </li>
-
-                        < li className = "list-group-item" > Dél - amerikai őserdő </li>
-
-                            < li className = "list-group-item" > Sarki vidék </li>
-
-                                < li className = "list-group-item" > Ausztráliai területek </li>
-                                    </ul>
-                                    </div>
-
-                                    < div className = "col-sm-4 kartya mb-2" >
-                                        <h2>Népszerű állatok </h2>
-
-                                            < ol className = "list-group list-group-numbered" >
-                                                <li className="list-group-item" > Oroszlán </li>
-
-                                                    < li className = "list-group-item" > Elefánt </li>
-
-                                                        < li className = "list-group-item" > Zsiráf </li>
-
-                                                            < li className = "list-group-item" > Panda </li>
-
-                                                                < li className = "list-group-item" > Pingvin </li>
-                                                                    </ol>
-                                                                    </div>
-
-                                                                    < div className = "col-sm-4 kartya mb-2" >
-                                                                        <h2>Táplálkozás </h2>
-
-                                                                        < ol className = "list-group list-group-numbered" >
-                                                                            <li className="list-group-item" > Növényevő </li>
-
-                                                                                < li className = "list-group-item" > Húsevő </li>
-
-                                                                                    < li className = "list-group-item" > Mindenevő </li>
-
-                                                                                        < li className = "list-group-item" > Gyümölcsevő </li>
-
-                                                                                            < li className = "list-group-item" > Rovarokkal táplálkozó </li>
-                                                                                                </ol>
-                                                                                                </div>
-                                                                                                </div>
+        <ListCard title="Élőhelyek" content = { ["Afrikai szavanna", "Ázsiai esőerdő", "Dél-amerikai őserdő", "Sarki vidék", "Ausztráliai területek"]} />
+            <ListCard otherKind title = "Népszerű állatok" content = { ["Oroszlán", "Elefánt", "Zsiráf", "Panda", "Pingvin"]} />
+                <ListCard otherKind title = "Táplálkozás" content = { ["Növényevő", "Húsevő", "Mindenevő", "Gyümölcsevő", "Rovarokkal táplálkozó"]} />
+                    </div>
 
     { /* TÁBLÁZAT */ }
 
@@ -183,16 +144,17 @@ function App() {
                                                                 </div>
 
     { /* ÁLLATOK */ }
+    <AnimalCard title="Oroszlán" name = "Szimba" about = "Szimba egy 8 éves hím oroszlán. Súlya körülbelül 190 kg." endangered favourites = { ["marhahús", "csirkehús"]} />
+        <AnimalCard title="Elefánt" name = "Lili" about = "Lili egy 12 éves elefánt.Súlya körülbelül 3200 kg." favourites = { ["fű", "levelek", "gyümölcsök"]} />
+            <div className = "row mb-1" >
+                <div className="col-sm-3 col-md-6 col-lg-3 kartya mb-3 h-100" >
+                    <h2>Oroszlán </h2>
 
-    <div className="row mb-1" >
-        <div className="col-sm-3 col-md-6 col-lg-3 kartya mb-3 h-100" >
-            <h2>Oroszlán </h2>
+                    < div className = "card" >
+                        <div className="card-body" >
+                            <h3>Szimba </h3>
 
-            < div className = "card" >
-                <div className="card-body" >
-                    <h3>Szimba </h3>
-
-                    <p>
+                            <p>
                 Szimba egy 8 éves hím oroszlán.Súlya körülbelül 190 kg.
               </p>
 
